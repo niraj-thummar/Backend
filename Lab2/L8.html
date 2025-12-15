@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car{
+            constructor(name, year){
+                this.name = name;
+                this.year = year;
+            }
+            display(){
+                return `car name is ${this.name} and year is ${this.year}`;
+            }
+        }
+        let car = new Car("fanti", 2006);
+ 
+        document.write(car.display());
+    </script>
+</body>
+</html>

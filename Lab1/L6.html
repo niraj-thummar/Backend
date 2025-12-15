@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = prompt("enter number");
+        let ori_num = num;
+        ans = 0;
+        count = 0;
+        while(num != 0){
+            count++;
+            num = parseInt(num/10);
+        }
+        num = ori_num;
+        while(num != 0){
+            rem = num%10;
+            ans += Math.pow(rem, count);
+            num = parseInt(num/10);
+        }
+        if(ori_num == ans){
+            alert("armstrong");
+        }else{
+            alert("not armstrong")
+        }
+    </script>
+</body>
+</html>
