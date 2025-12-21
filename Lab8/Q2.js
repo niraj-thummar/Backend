@@ -2,6 +2,13 @@ const express = require('express');
 require('dotenv').config();
 const app = express();
 
+app.use(express.json());
+
+app.post('/registration',(req, res)=>{
+    const {name, pass, email} = req.body;
+    res.send(`name = ${name}, pass = ${pass}, email = ${email}`);
+})
+
 app.get('/',(req, res)=>{
     res.send('home page');
 })
