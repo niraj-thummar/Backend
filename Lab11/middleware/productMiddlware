@@ -1,0 +1,19 @@
+const jwt = require('jsonwebtoken')
+const StuVerfiyToken=(req,res,next)=>{
+const authheader = req.headers.authorization;
+if(!authheader){
+    return res.json({messsage:"token missing"})
+}
+
+const token = authheader.split(' ')[1];
+
+try{
+   const decoded=jwt.verify(token,process.env.secret);
+   req.id=decoded.id;
+   next() 
+}
+catch(err){
+    res.json({err})
+}
+} 
+module.exports= StuVerfiyToken;
