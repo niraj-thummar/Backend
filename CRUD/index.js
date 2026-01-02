@@ -4,7 +4,7 @@ const app = express()
 
 require('dotenv').config()
 
-mongoose.connect(process.env.mongooseUrl).then(()=>{
+mongoose.connect(process.env.mongoUrl).then(()=>{
     console.log("db connected")
 }).catch((err)=>{
     console.log(err);
